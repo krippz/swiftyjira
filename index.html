@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">
+					<textarea data-template>
+						## LunchTalk: Swift Jira Demo
+
+
+						### Why this?
+
+						### Why Swift?
+
+						### Why Jira ?!?
+
+						Note:
+						ville koda lite i ett nytt språk
+						hitta ngt som skulle ge mening, inte en ToDo app
+						personligt mål
+						att hämta data från Jira och processa den på olika sätt e perfekt
+					</textarea>
+				</section>
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">
+					<textarea data-template>
+						## Swifty Intro
+
+
+						#### Swift was released 2014
+						became open source with version 2.2  
+						currently at version 5.1.4
+						Note:
+						Mac Linux, open source finns till windows... 
+						old compiler
+						generellt  
+						multi-paradigm  
+						kompilerat
+						influenser från  Objective-C, Rust, Haskell, Ruby, Python, C#, CLU
+
+
+						### big new feature: SwiftUI
+						Design apps in a declarative way 
+						##### more on that later...
+						Note:
+						That’s a fancy way of saying that we tell SwiftUI how we want our UI to look and work, 
+						and it figures out how to make that happen as the user interacts with it.
+					</textarea>
+				</section>
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">
+					<textarea data-template>
+						## A language is more than syntax...
+
+
+						It is a collection of many pieces of software...  
+						- compiler / tooling
+						- ide / language support in editors
+						- build system
+						- package manager
+						Note:
+						provade xcode
+						provade package manager, den numera inbyggda i Swift
+						provade vscode, med plugins. - svårare med ok
+						provade linux
+
+
+						## ... but I really like the syntax
+
+
+						some of the stuff I like
+						- if let
+						- guard
+						- closure (lamda)
+						- typealias
+						Note:
+						kommer att visa lite av koncepten i demo
+					</textarea>
+				</section>
+
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">>
+					<textarea data-template>
+						## Jira
+
+
+						## Numbers, numbers, numbers 
+						### Jira has them ...  
+						Wanted a helper to do commitment estimates  
+						Wanted a helper to do biweekly point count  
+						Wanted a helper for orphan issues  
+
+
+						### Use case 1
+
+						How to get a list of issues contained in a list of epics.
+						How to get the points for each issue and calculate a sum for all the issues.  
+						...  
+						~~Structure~~
+
+						Note:
+						Yes I know, Structure
+
+
+						## Use case 2  
+
+						How to get a list of issues that are resolved as done  
+						and get the sum of those issues  
+
+						... again ~~Structure~~ right?  
+						
+						__curve ball__  
+
+
+						### if a issue does not have a point, who do you ask?  
+						- check if issue has a branch, see what repo  
+						- if we have a branch, see who is the author of the last commit  
+						- if no branch exist, see who was assigned  
+						- if no one was assigned, check with the creator of the issue.  
+
+						Where is you Structure now :)
+
+					</textarea>
+				</section>
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">>
+					<textarea data-template>
+						## Demo
+
+						Note:
+						use case 1, 	swift run jh-console --keys pa-5754 pa-5242 pa-5809  
+						use case 2, 	swift run jh-console --lastweeks  
+						show the repo, 	swift run jh-console --lastweeks 1  
+					</textarea>
+				</section>
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">>
+					<textarea data-template>
+						## More on SwiftUI
+						#### There is another... ... ... Use case  
+						(read as Yoda would have said it) 
+
+
+						## Use case 3 
+						See how the current commitment is   
+						going on the go ->  mobile app  
+
+						see how many of the epics at   
+						99%, 60% and 30% have been started.   
+
+						see how many issues in each epic are done, get a feeling for how the epic is moving  
+
+
+					</textarea>
+				</section>
+				<section data-markdown
+						 data-separator="^\n\n\n"
+						 data-separator-vertical="^\n\n"
+						 data-separator-notes="^Note:"
+						 data-charset="iso-8859-15">>
+					<textarea data-template>
+						## Final Demo
+
+						Note:
+						visa iphone appen, i simulator och på min iphone
+					</textarea>
+				</section>
+	</section>
+</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
